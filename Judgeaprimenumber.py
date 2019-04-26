@@ -1,24 +1,18 @@
-def prime(a):
-    if (a == 1):
-        print("a is prime number.")
+def is_prime(n):
+    if (n == 1):
+        print("False")
+    elif (n == 2):
+        print("True")
     else:
-        for i in range(2, a):
-            if (a % i == 0):
-                print('a is not prime number')
+        for i in range(2, n):
+            if (n % i == 0):
+                print('False')
                 return()
             else:
                 i = i + 1
-        print('a is prime number.')
+        print('True')
 
 
-active = True
+n = int(input())
 
-prompt = "请输入一个整数,如果输入0，则退出本程序"
-while active:
-    a = int(input("Please input a int number" + "\n"))
-
-    if int(a) == 0:
-        active = False
-    else:
-        prime(a)
-    
+is_prime(n)
